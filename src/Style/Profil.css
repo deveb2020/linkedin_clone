@@ -1,0 +1,140 @@
+.left_components {
+    display: block;
+}
+
+.profil_component {
+    height: 19rem;
+    width: 13.5rem;
+    background: rgb(255, 254, 255);
+    border: 1px solid rgba(128, 128, 128, 0.452);
+    border-radius: 10px;
+}
+
+.profil_bkg_image {
+    background: red;
+    width: 100%;
+    height: 5rem;
+    position: relative;
+}
+
+.profil_informations {
+    height: 7rem;
+    background: white;
+}
+
+.profil_conections {
+    background: rgb(252, 252, 252);
+    height: 4rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.452);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.452);
+}
+
+.bcg_cover{
+    width: 100%;
+    height: 100%;
+}
+
+.user_photo {
+    width: 5rem;
+    height: 5rem;
+    background: rgb(255, 255, 255) !important;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.user_photo>img {
+    width: 60%;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.profil_informations>h1 {
+    font-size: 0.8rem;
+    padding-top: 3rem;
+    color: rgba(32, 32, 32, 0.815);
+}
+
+.profil_informations>p {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(0, 0, 255, 0.699);
+    width: 4.5rem;
+    margin: 0.5rem auto;
+}
+
+.profil_informations>p:hover {
+    font-size: 0.7rem;
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+.profil_conections{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    align-items: center;
+    color: rgba(32, 32, 32, 0.815);
+}
+
+.profil_conections>div>p {
+    text-align: left;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.profil_conections>svg {
+    cursor: pointer;
+}
+
+.profil_items {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    margin: 0.8rem 0.5rem;
+    color: rgba(32, 32, 32, 0.815);
+    cursor: pointer;
+}
+
+.profil_items>svg  {
+    margin-right: 0.2rem;
+    font-size: 1.1rem;
+}
+
+.group_component {
+    height: 8rem;
+    width: 13.5rem;
+    background: rgb(255, 254, 255);
+    border: 1px solid rgba(128, 128, 128, 0.452);
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.group_component>div {
+    color: rgba(32, 32, 32, 0.815);
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.group_component>div>p {
+    padding: 0.2rem 0;
+}
+
+
+.discover_more {
+    border-top: 1px solid rgba(128, 128, 128, 0.452);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.541);
+    cursor: pointer;
+}
