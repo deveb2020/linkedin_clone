@@ -21,6 +21,10 @@ header {
     align-items: center;
 }
 
+.right_components>div {
+    cursor: pointer;
+}
+
 .icons_wrapper>svg {
     height: 1.3rem;
     width: 1.5rem;
@@ -53,3 +57,4 @@ header {
     padding: 0.5rem;
     color: rgba(0, 0, 0, 0.5);
 }
+

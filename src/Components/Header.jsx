@@ -5,7 +5,7 @@ import { FaBriefcase } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { FaCommentAlt } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-import LinkedinICon from "../Images/linkedin_icon.png"
+import LinkedinICon from "../Images/linkedin_icon_logo.png"
 
 
 
@@ -19,9 +19,9 @@ const Header = () => {
             <div className="right_components">
                 <div className="icons_wrapper"><FaHome/><p>Home</p></div>
                 <div className="icons_wrapper"><FaUserFriends/><p>My network</p></div>
-                <div className="icons_wrapper"><FaBriefcase/><p>Home</p></div>
-                <div className="icons_wrapper"><FaCommentAlt/><p>Home</p></div>
-                <div className="icons_wrapper"><FaBell/><p>Home</p></div>
+                <div className="icons_wrapper"><FaBriefcase/><p>Jobs</p></div>
+                <div className="icons_wrapper"><FaCommentAlt/><p>Messaging</p></div>
+                <div className="icons_wrapper"><FaBell/><p>Notifications</p></div>
             </div>
         </header>
     )
