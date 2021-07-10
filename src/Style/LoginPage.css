@@ -44,12 +44,12 @@ main>div>h2 {
     font-weight: 350;
 }
 
-main>div>a>img {
+main>div>button>img {
     width: 1.5rem;
     margin-right: 0.3rem;
 }
 
-main>div>a {
+main>div>button {
     padding: 1rem 7rem;
     border-radius: 20px;
     border: 1px solid rgba(128, 128, 128, 0.301);
@@ -62,7 +62,7 @@ main>div>a {
     color: rgba(48, 47, 47, 0.767);
 }
 
-main>div>a:hover {
+main>div>button:hover {
     background: rgba(187, 185, 185, 0.192);
 }
 
@@ -78,6 +78,3 @@ main>div>a:hover {
     cursor: pointer;
 }
 
-main>div>a {
-    text-decoration: none;
-}

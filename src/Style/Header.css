@@ -58,3 +58,51 @@ header {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.logout_icon {
+    background: green;
+    border-radius: 50%;
+    height: 1.6rem;
+    width: 1.7rem;
+    position: relative;
+}
+
+.logout_icon>svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.profil_log_out {
+    position: relative;
+}
+
+.profil_log_out>p {
+    display: flex;
+    align-items: center;
+    color: green;
+}
+
+.profil_log_out>p>svg {
+    font-size: 0.8rem;
+    color: green;
+}
+
+.profil_log_out>button {
+    position: absolute;
+    width: 5rem;
+    padding: 0.3rem 0.8rem;
+    right: -1.7rem;
+    bottom: -1.6rem;
+    border-radius: 5px;
+    border: 1px solid rgba(233, 18, 18, 0.486);
+    background: rgba(233, 18, 18, 0.486);
+    color: white;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.profil_log_out:hover button {
+    visibility: visible;
+}

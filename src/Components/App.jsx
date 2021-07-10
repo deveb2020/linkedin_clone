@@ -1,10 +1,7 @@
 import '../Style/App.css';
-import CreatePost from './CreatePost';
-import Header from './Header';
 import LoginPage from './LoginPage';
-import NewsFeed from './NewsFeed';
-import Profil from './Profil';
 import { BrowserRouter as Router,Switch,Route } from "react-router-dom";
+import Homepage from './Homepage';
 
 
 function App() {
@@ -16,12 +13,7 @@ function App() {
                     <LoginPage/>
                 </Route>
                 <Route exact path="/Homepage">
-                    <Header/>
-                    <main>
-                    <Profil/>
-                    <CreatePost/>
-                    <NewsFeed/>
-                    </main>
+                    <Homepage/>
                 </Route>
             </Switch>
         </Router>

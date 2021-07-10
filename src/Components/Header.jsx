@@ -5,11 +5,16 @@ import { FaBriefcase } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { FaCommentAlt } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 import LinkedinICon from "../Images/linkedin_icon_logo.png"
+import { FaUser } from "react-icons/fa";
+import { auth } from '../Firebase/FirebaseConfig';
 
 
 
 const Header = () => {
+
+
     return (
         <header>
             <div className="left_elements">
@@ -22,6 +27,11 @@ const Header = () => {
                 <div className="icons_wrapper"><FaBriefcase/><p>Jobs</p></div>
                 <div className="icons_wrapper"><FaCommentAlt/><p>Messaging</p></div>
                 <div className="icons_wrapper"><FaBell/><p>Notifications</p></div>
+                <div className="icons_wrapper profil_log_out">
+                    <div className="logout_icon"><FaUser/></div>
+                    <p>Me <FaAngleDown/></p>
+                    <button onClick={() => auth.signOut()}>Log out</button>
+                </div>
             </div>
         </header>
     )
