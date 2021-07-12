@@ -1,12 +1,12 @@
 import LinkedinIcon from "../Images/linkedin_icon.png"
 import LoginCover from "../Images/linkedin_login_cover.png"
 import Google from "../Images/google.png"
-import '../Style/LoginPage.css'
 import { provider } from '../Firebase/FirebaseConfig';
 import { signInWithGoogle } from '../Firebase/FirebaseConfig';
 import { auth } from '../Firebase/FirebaseConfig';
 import { Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
+import '../Style/LoginPage.css'
 
 
 const LoginPage = () => {

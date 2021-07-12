@@ -1,5 +1,4 @@
 import '../Style/CreatePost.css'
-import { FaUser } from "react-icons/fa";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { FcAddImage } from "react-icons/fc";
 import { FcVideoCall } from "react-icons/fc";
@@ -9,10 +8,13 @@ import { useState } from 'react';
 import Publications from './Publications';
 import { FIREBASE } from "../Firebase/FirebaseConfig"
 import firebase from "firebase/app"
+import { useSelector } from 'react-redux'
+import { FaUser } from "react-icons/fa";
 
 
 const CreatePost = () => {
     const [PostInput, setPostInput] = useState("")
+    const UserPhoto = useSelector(state => state.userProfilPhoto)
 
     const handleSubmitPost = async () => {
         await FIREBASE.firestore().collection('posts').add({
@@ -21,12 +23,14 @@ const CreatePost = () => {
         })
     }
 
+    const userPhotoUpload = UserPhoto !== "" ? <img src={UserPhoto} alt="user_img" className="user_img" /> : <FaUser/>
+
 
     return (
         <div className="feed_component">
             <div className="create_post_componenet">
                 <div className="search_wrapper">
-                    <div className="user_image"><FaUser/></div>
+                    <div className="user_image">{userPhotoUpload}</div>
                     <div className="input_wrapper">
                         <input type="text" placeholder="Start a post" onChange={(e) => setPostInput(e.target.value)}/>
                         <FaRegPaperPlane onClick={handleSubmitPost}/>

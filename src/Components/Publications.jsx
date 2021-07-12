@@ -9,12 +9,15 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { FIREBASE } from "../Firebase/FirebaseConfig"
 import { useEffect, useState } from "react"
 import { useSelector } from 'react-redux'
+import { FaUser } from "react-icons/fa";
 
 
 const Publications = () => {
     const [DataBaseData, setDataBaseData] = useState([])
     const userName = useSelector(state => state.name)
     const userEmail = useSelector(state => state.email)
+    const UserPhoto = useSelector(state => state.userProfilPhoto)
+
 
     useEffect(() => {
         FIREBASE.firestore().collection('posts').orderBy('timestamp', 'desc').onSnapshot((querySnapshot) => { 
@@ -28,7 +31,9 @@ const Publications = () => {
                 <div className="publications_wrapper">
                     <FaEllipsisH/>
                     <div className="post_tittle_bloc">
-                        <img src={EgzonPhoto} alt="" />
+                        <div className="post_icon_wrapper">
+                            <FaUser/>
+                        </div>
                         <div>
                             <h1>{userName}</h1>
                             <p>{userEmail}</p>

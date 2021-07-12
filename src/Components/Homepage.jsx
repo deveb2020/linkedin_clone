@@ -7,7 +7,6 @@ import { Redirect } from "react-router-dom";
 
 
 const Homepage = () => {
-
     const IsLogedIn = useSelector(state => state.logInStatus)
 
     if (!IsLogedIn) { return <Redirect to="/" /> }

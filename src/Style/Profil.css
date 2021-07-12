@@ -45,7 +45,16 @@
     top: 3rem;
     left: 50%;
     transform: translate(-50%, 0);
+    overflow: hidden;
 }
+
+.user_img {
+    width: 100% !important;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 
 .user_photo>img {
     width: 60%;
@@ -137,4 +146,20 @@
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.541);
     cursor: pointer;
+}
+
+#file {
+    display: none;
+}
+
+.profil_informations>label {
+    color: rgb(47, 12, 245);
+    width: 5rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.profil_informations>label:hover {
+    border-bottom: 1px solid rgb(47, 12, 245);
 }

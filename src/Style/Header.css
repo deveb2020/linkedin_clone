@@ -64,6 +64,7 @@ header {
     height: 1.6rem;
     width: 1.7rem;
     position: relative;
+    overflow: hidden;
 }
 
 .logout_icon>svg {

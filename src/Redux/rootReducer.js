@@ -2,7 +2,8 @@
 const initialState = {
     logInStatus: false,
     name: "",
-    email: ""
+    email: "",
+    userProfilPhoto: ""
 }
 
 function rootReducers(state = initialState, action) {
@@ -24,6 +25,12 @@ function rootReducers(state = initialState, action) {
             return { 
                 ...state,
                 email: action.userEmail 
+            }
+
+        case 'USER_PHOTO' :
+            return { 
+                ...state,
+                userProfilPhoto: action.userPhoto 
             }
 
         default:
