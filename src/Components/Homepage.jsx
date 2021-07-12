@@ -14,6 +14,7 @@ const Homepage = () => {
     return (
         <>
             <Header/>
+            <a href="https://www.linkedin.com/in/egzonberishabordeaux/"><h3 className="job_offer">Are you looking for a front-end | ReactJS developper, <span>I'am open to work 💼</span></h3></a>
             <main>
                 <Profil/>
                 <CreatePost/>

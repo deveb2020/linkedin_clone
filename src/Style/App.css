@@ -31,5 +31,14 @@
 main {
   justify-content: center;
   display: flex;
-  margin-top: 2rem;
+}
+
+.job_offer {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.job_offer>span {
+  color: rgb(8, 8, 8);
 }

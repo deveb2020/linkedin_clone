@@ -2,12 +2,12 @@ header {
     background: rgb(255, 255, 255);
     display: flex;
     justify-content:space-around;
-    height: 3rem;
+    height: 4rem;
 }
 
 .linkedin_icon {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-right: 1rem;
 }
 
@@ -26,8 +26,8 @@ header {
 }
 
 .icons_wrapper>svg {
-    height: 1.3rem;
-    width: 1.5rem;
+    height: 1.5rem;
+    width: 1.8rem;
     color: rgba(25, 25, 25, 0.753);
 }
 
@@ -43,14 +43,17 @@ header {
     border: none;
     display: flex;
     border-radius: 3px;
-    height: 2rem;
+    height: 2.5rem;
     background: rgb(238, 243, 248);
+    align-items: center;
+    width: 17rem;
 }
 
 .search_field>input {
     background: none;
     border: none;
     height: 2rem;
+    width: 100%;
 }
 
 .search_field>svg {
@@ -61,8 +64,8 @@ header {
 .logout_icon {
     background: green;
     border-radius: 50%;
-    height: 1.6rem;
-    width: 1.7rem;
+    height: 2rem;
+    width: 2rem;
     position: relative;
     overflow: hidden;
 }
