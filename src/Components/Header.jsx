@@ -9,12 +9,17 @@ import { FaAngleDown } from "react-icons/fa";
 import LinkedinICon from "../Images/linkedin_icon_logo.png"
 import { FaUser } from "react-icons/fa";
 import { auth } from '../Firebase/FirebaseConfig';
+import { useDispatch } from 'react-redux'
 
 
 
 const Header = () => {
+    const dispatch = useDispatch()
 
-
+    const handleLogOut = () => {
+        dispatch({type: 'USER_IS_AUTH', LoginStatus: false})
+        auth.signOut()
+    }
     return (
         <header>
             <div className="left_elements">
@@ -30,7 +35,7 @@ const Header = () => {
                 <div className="icons_wrapper profil_log_out">
                     <div className="logout_icon"><FaUser/></div>
                     <p>Me <FaAngleDown/></p>
-                    <button onClick={() => auth.signOut()}>Log out</button>
+                    <button onClick={handleLogOut}>Log out</button>
                 </div>
             </div>
         </header>

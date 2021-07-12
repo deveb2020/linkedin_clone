@@ -13,11 +13,11 @@ var firebaseConfig = {
     appId: "1:795323203429:web:fa557d910fcdd7efe12b8c"
 };
 
-firebase.initializeApp(firebaseConfig);
+export const FIREBASE = firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
 
-const provider = new firebase.auth.GoogleAuthProvider();
+export const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 

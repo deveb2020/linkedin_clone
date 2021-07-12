@@ -5,16 +5,34 @@ import App from './Components/App';
 import { createStore } from "redux"
 import rootReducers from './Redux/rootReducer'
 import { Provider } from 'react-redux'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
+import { PersistGate } from 'redux-persist/integration/react'
 
+//Redux Persist
+const persistConfig = {
+  key: 'rootReducers',
+  storage,
+  whitelist: ['logInStatus', 'name', 'email'] // all the posts will be perserved
+}
 
-const store = createStore( rootReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
+const persistedReducer = persistReducer( persistConfig, rootReducers)
+
+const store = createStore( persistedReducer , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
+
+const persistor = persistStore(store)
+
 
 
 ReactDOM.render(
   <React.StrictMode>
+
     <Provider store={store}>
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>  
     </Provider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

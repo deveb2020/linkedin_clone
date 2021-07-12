@@ -3,9 +3,12 @@ import BackgroungProfilCover from "../Images/bkg_cover_profil.jpg"
 import UserPhoto from "../Images/camera-icon.png"
 import { FaUserPlus } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 
 const Profil = () => {
+    const userName = useSelector(state => state.name)
+
     return (
         <div className="left_components">
             <div className="profil_component">
@@ -14,7 +17,7 @@ const Profil = () => {
                     <div className="user_photo"><img src={UserPhoto} alt="user_img" /></div>
                 </div>
                 <div className="profil_informations">
-                    <h1>Welcome, Egzon BERISHA!</h1>
+                    <h1>Welcome, {userName} !</h1>
                     <p>Add a photo</p>
                 </div>
                 <div className="profil_conections">
