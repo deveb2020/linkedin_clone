@@ -8,13 +8,21 @@ import { useState } from 'react';
 import Publications from './Publications';
 import { FIREBASE } from "../Firebase/FirebaseConfig"
 import firebase from "firebase/app"
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 import { FaUser } from "react-icons/fa";
+import { useEffect } from "react"
 
 
 const CreatePost = () => {
     const [PostInput, setPostInput] = useState("")
     const UserPhoto = useSelector(state => state.userProfilPhoto)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        FIREBASE.firestore().collection('posts').orderBy('timestamp', 'desc').onSnapshot((querySnapshot) => { 
+            dispatch({type: 'POSTS', posts:querySnapshot.docs.map(doc => ({id: doc.id, posts: doc.data()}))})
+        })
+    }, [dispatch])
 
     const handleSubmitPost = async () => {
         await FIREBASE.firestore().collection('posts').add({

@@ -3,7 +3,8 @@ const initialState = {
     logInStatus: false,
     name: "",
     email: "",
-    userProfilPhoto: ""
+    userProfilPhoto: "",
+    posts: []
 }
 
 function rootReducers(state = initialState, action) {
@@ -31,6 +32,12 @@ function rootReducers(state = initialState, action) {
             return { 
                 ...state,
                 userProfilPhoto: action.userPhoto 
+            }
+
+        case 'POSTS' : 
+            return {
+                ...state,
+                posts: action.posts
             }
 
         default:
