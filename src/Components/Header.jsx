@@ -21,7 +21,7 @@ const Header = () => {
     const handleLogOut = () => {
         // change the state of LoginStatus to false in redux so we can redirect the user to login page
         dispatch({type: 'USER_IS_AUTH', LoginStatus: false})
-        dispatch({type: 'USER_PHOTO', userProfilPhoto: ""})
+        dispatch({type: 'USER_PHOTO', userPhoto: ""})
         // whe sign out the user so the state of auth in firebase changes to null
         // this function has an inpact in the condition made on Login component 
         auth.signOut()
