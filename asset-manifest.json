@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/linkedin_clone/static/css/main.48a7d410.chunk.css",
-    "main.js": "/linkedin_clone/static/js/main.a5b2a0f9.chunk.js",
-    "main.js.map": "/linkedin_clone/static/js/main.a5b2a0f9.chunk.js.map",
+    "main.js": "/linkedin_clone/static/js/main.c9bafc4a.chunk.js",
+    "main.js.map": "/linkedin_clone/static/js/main.c9bafc4a.chunk.js.map",
     "runtime-main.js": "/linkedin_clone/static/js/runtime-main.f8e193af.js",
     "runtime-main.js.map": "/linkedin_clone/static/js/runtime-main.f8e193af.js.map",
     "static/js/2.840e37f4.chunk.js": "/linkedin_clone/static/js/2.840e37f4.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.f8e193af.js",
     "static/js/2.840e37f4.chunk.js",
     "static/css/main.48a7d410.chunk.css",
-    "static/js/main.a5b2a0f9.chunk.js"
+    "static/js/main.c9bafc4a.chunk.js"
   ]
 }
