@@ -13,7 +13,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 const persistConfig = {
   key: 'rootReducers',
   storage,
-  whitelist: ['logInStatus', 'name', 'email', 'userProfilPhoto'] // all the selected states will be preserved
+  whitelist: ['logInStatus', 'name', 'email', 'userProfilPhoto', 'posts'] // all the selected states will be preserved
 }
 
 const persistedReducer = persistReducer( persistConfig, rootReducers)

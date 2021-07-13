@@ -17,16 +17,22 @@ const CreatePost = () => {
     const [PostInput, setPostInput] = useState("")
     const UserPhoto = useSelector(state => state.userProfilPhoto)
     const dispatch = useDispatch()
+    const userName = useSelector(state => state.name)
+    const userEmail = useSelector(state => state.email)
 
+    // grab the data from firebase on componenet render
     useEffect(() => {
         FIREBASE.firestore().collection('posts').orderBy('timestamp', 'desc').onSnapshot((querySnapshot) => { 
             dispatch({type: 'POSTS', posts:querySnapshot.docs.map(doc => ({id: doc.id, posts: doc.data()}))})
         })
     }, [dispatch])
 
+    // send the post data to firebase
     const handleSubmitPost = async () => {
         await FIREBASE.firestore().collection('posts').add({
             postContent: PostInput,
+            postUser: userName,
+            postEmail: userEmail,
             timestamp: firebase.firestore.FieldValue.serverTimestamp() //timestamp is used to sort the data by order
         })
     }

@@ -12,8 +12,6 @@ import FlipMove from "react-flip-move";
 
 
 const Publications = forwardRef((ref) => {
-    const userName = useSelector(state => state.name)
-    const userEmail = useSelector(state => state.email)
     const DataBaseData = useSelector(state => state.posts)
 
 
@@ -28,8 +26,8 @@ const Publications = forwardRef((ref) => {
                                 <FaUser/>
                             </div>
                             <div>
-                                <h1>{userName}</h1>
-                                <p>{userEmail}</p>
+                                <h1>{post.posts.postUser}</h1>
+                                <p>{post.posts.postEmail}</p>
                                 <p>13/07/2021</p>
                             </div>
                         </div>
